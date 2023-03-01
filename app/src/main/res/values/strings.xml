@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">Formative2</string>
+    <string name = "btn_text">Mail</string>
+    <string name = "Text">Text</string>
+    <string name = "rbtn_one">One</string>
+    <string name = "rbtn_two">Two</string>
+    <string name="rbtn_Three">Three</string>
+    <string name="tbtn_power">Off</string>
+    <string name="etxt_msg">Enter message</string>
+    <string name="btn_toast">Toast</string>
+    <string name="cbx_fruit">Fruit</string>
+    <string name="cbx_meat">Meat</string>
 </resources>

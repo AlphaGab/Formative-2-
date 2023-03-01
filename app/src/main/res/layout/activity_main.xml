@@ -8,109 +8,121 @@
 
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btn_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="36dp"
         android:layout_marginTop="40dp"
-        android:text="Button"
+        android:text="@string/Text"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btn_txt_image"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
-        android:text="Button"
+        android:text="@string/btn_text"
+        android:onClick="doButtonTextImage"
+        android:drawableLeft="@android:drawable/ic_dialog_email"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.064"
-        app:layout_constraintStart_toEndOf="@+id/button"
+        app:layout_constraintStart_toEndOf="@+id/btn_text"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
-        android:id="@+id/imageButton"
+        android:id="@+id/ibtn_image"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
-        app:layout_constraintBottom_toTopOf="@+id/button2"
+        android:onClick="doImageButton"
+        android:hint = "Mail"
+        android:contentDescription="Enter Mail"
+
+        app:layout_constraintBottom_toTopOf="@+id/btn_txt_image"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.159"
-        app:layout_constraintStart_toEndOf="@+id/button2"
+        app:layout_constraintStart_toEndOf="@+id/btn_txt_image"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@android:drawable/ic_menu_camera" />
 
     <CheckBox
-        android:id="@+id/checkBox"
+        android:id="@+id/cbx_fruit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="doCheckBox"
         android:layout_marginStart="48dp"
         android:layout_marginTop="24dp"
-        android:text="CheckBox"
+        android:text="@string/cbx_fruit"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_text" />
 
     <CheckBox
-        android:id="@+id/checkBox2"
+        android:id="@+id/cbx_meat"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
-        android:layout_marginTop="24dp"
+        android:onClick="doCheckBox"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="156dp"
-        android:text="CheckBox"
+        android:text="@string/cbx_meat"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button2" />
+        app:layout_constraintStart_toEndOf="@+id/cbx_fruit"
+        app:layout_constraintTop_toBottomOf="@+id/btn_txt_image" />
 
     <ToggleButton
-        android:id="@+id/toggleButton"
+        android:id="@+id/tbtn_power"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
         android:layout_marginStart="96dp"
         android:layout_marginTop="256dp"
-
+        android:onClick="doPowerButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/radioGroup"
         app:layout_constraintTop_toTopOf="parent" />
 
     <RatingBar
-        android:id="@+id/ratingBar"
+
+        android:id="@+id/rbar_star"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName"
+        android:contentDescription="Give Feedback"
+        app:layout_constraintBottom_toTopOf="@+id/etxt_msg"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/etxt_msg"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Name"
+        android:hint="@string/etxt_msg"
 
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/button4"
+        app:layout_constraintEnd_toStartOf="@+id/btn_toast"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/btn_toast"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
+        android:onClick="doToast"
+        android:text="@string/btn_toast"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/editTextTextPersonName" />
+        app:layout_constraintStart_toEndOf="@+id/etxt_msg" />
 
     <RadioGroup
         android:id="@+id/radioGroup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
+        android:checkedButton="@+id/rtbn_one"
+        android:onClick="doRadioButton"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.1"
@@ -119,28 +131,31 @@
         app:layout_constraintVertical_bias=".35">
 
         <RadioButton
-            android:id="@+id/Rd2"
+            android:id="@+id/rtbn_one"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Radio Button"
+            android:text="@string/rbtn_one"
+            android:onClick="doRadioButton"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"></RadioButton>
 
         <RadioButton
-            android:id="@+id/Rd1"
+            android:id="@+id/rtbn_two"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Radio Button"
-            app:layout_constraintBottom_toTopOf="@+id/Rd2"
-            app:layout_constraintStart_toStartOf="@+id/Rd2"></RadioButton>
+            android:text="@string/rbtn_two"
+            android:onClick="doRadioButton"
+            app:layout_constraintBottom_toTopOf="@+id/rtbn_one"
+            app:layout_constraintStart_toStartOf="@+id/rtbn_one"></RadioButton>
 
         <RadioButton
-            android:id="@+id/Rd3"
+            android:id="@+id/rbtn_three"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Radio Button"
+            android:onClick="doRadioButton"
+            android:text="@string/rbtn_Three"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/Rd2">
+            app:layout_constraintTop_toBottomOf="@+id/rtbn_two">
 
         </RadioButton>
     </RadioGroup>
